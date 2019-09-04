@@ -1,9 +1,9 @@
 import React from 'react';
 
 const charComponent = props => {
-  const { textValue, click } = props;
+  const { clicked, character } = props;
 
-  let style = {
+  const style = {
     display: 'inline-block',
     padding: '16px',
     textAlign: 'center',
@@ -12,8 +12,8 @@ const charComponent = props => {
   };
 
   return (
-    <div style={style} onClick={click}>
-      {textValue}
+    <div style={style} onClick={clicked}>
+      {character}
     </div>
   );
 };

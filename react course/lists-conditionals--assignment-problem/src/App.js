@@ -5,18 +5,32 @@ import CharComponent from './components/CharComponent';
 
 class App extends Component {
   state = {
-    inputText: ''
+    userInput: ''
   };
 
-  changedInputHandler = event => {
-    this.setState({ inputText: event.target.value });
+  inputChangedHandler = event => {
+    this.setState({ userInput: event.target.value });
   };
 
-  charComponentClickHandler = () => {
-    this.setState({ inputText: '' });
+  deleteCharHandler = index => {
+    const text = this.state.userInput.split('');
+    text.splice(index, 1);
+    const updatedText = text.join('');
+
+    this.setState({ userInput: updatedText });
   };
 
   render() {
+    const charList = this.state.userInput.split('').map((ch, index) => {
+      return (
+        <CharComponent
+          character={ch}
+          key={index}
+          clicked={() => this.deleteCharHandler(index)}
+        />
+      );
+    });
+
     return (
       <div className="App">
         <ol>
@@ -52,15 +66,12 @@ class App extends Component {
         <p>Hint: Keep in mind that JavaScript strings are basically arrays!</p>
         <input
           type="text"
-          onChange={this.changedInputHandler}
-          value={this.state.inputText}
+          onChange={this.inputChangedHandler}
+          value={this.state.userInput}
         />
-        <p>{this.state.inputText}</p>
-        <ValidationComponent textLength={this.state.inputText.length} />
-        <CharComponent
-          textValue={this.state.inputText}
-          click={this.charComponentClickHandler}
-        />
+        <p>{this.state.userInput}</p>
+        <ValidationComponent textLength={this.state.userInput.length} />
+        {charList}
       </div>
     );
   }
