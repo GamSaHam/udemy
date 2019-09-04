@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Person from './Person/Person';
+import Radium from 'radium';
+
 import './App.css';
 
 class App extends Component {
@@ -49,17 +51,17 @@ class App extends Component {
 
   render() {
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
+      color: 'white',
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
-      curspr: 'pointer'
+      cursor: 'pointer'
     };
 
     let persons = null;
 
     if (this.state.showPersons) {
-      //
       persons = (
         <div>
           {this.state.persons.map((person, index) => {
@@ -75,14 +77,26 @@ class App extends Component {
           })}
         </div>
       );
+
+      style.backgroundColor = 'red';
+    }
+
+    let classes = []; // "red bold"
+
+    if (this.state.persons.length <= 2) {
+      classes.push('red'); //classes = ['red']
+    }
+
+    if (this.state.persons.length <= 1) {
+      classes.push('bold'); // classes = ['red', 'bold']
     }
 
     return (
       <div className="App">
         <h1>Hi, I'm a React App</h1>
-        <p>This is really working!</p>
+        <p className={classes.join(' ')}>This is really working!</p>
 
-        <button onClick={this.togglePersonHandler} style={style}>
+        <button style={style} onClick={this.togglePersonHandler}>
           Toggle Persons
         </button>
         {persons}
