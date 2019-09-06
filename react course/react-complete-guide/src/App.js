@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Person from './Person/Person';
-import Radium from 'radium';
 
 import './App.css';
 
@@ -111,4 +110,5 @@ class App extends Component {
   // );
 }
 
+// Hire order component
 export default App;
