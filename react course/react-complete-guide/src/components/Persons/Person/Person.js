@@ -30,11 +30,11 @@ class Person extends Component {
 
     return (
       <Aux>
-        <AuthContext.Consumer>
-          {context =>
-            context.authenticated ? <p>Authenticated!</p> : <p>Please log in</p>
-          }
-        </AuthContext.Consumer>
+        {this.context.authenticated ? (
+          <p>Authenticated!</p>
+        ) : (
+          <p>Please log in</p>
+        )}
 
         <p onClick={click}>
           I'm a {name} I am {age} years old!
