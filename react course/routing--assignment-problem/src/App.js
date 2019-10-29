@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Link, Route, Switch, Redirect } from 'react-router-dom';
+import { NavLink, Route, Switch, Redirect } from 'react-router-dom';
 
 import Courses from './containers/Courses/Courses';
+import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
 
 class App extends Component {
@@ -11,14 +12,14 @@ class App extends Component {
         <ol style={{ textAlign: 'left' }}>
           <li>
             Add Routes to load "Users" and "Courses" on different pages (by
-            entering a URL, without Links)
+            entering a URL, without NavLinks)
           </li>
           <li>
-            Add a simple navigation with two links => One leading to "Users",
+            Add a simple navigation with two NavLinks => One leading to "Users",
             one leading to "Courses"
           </li>
           <li>
-            Make the courses in "Courses" clickable by adding a link and load
+            Make the courses in "Courses" clickable by adding a NavLink and load
             the "Course" component in the place of "Courses" (without passing
             any data for now)
           </li>
@@ -41,16 +42,19 @@ class App extends Component {
         <nav>
           <ul style={{ listStyle: 'none', margin: 'auto', padding: '0' }}>
             <li style={{ margin: '10px', display: 'inline-block' }}>
-              <Link to="/users">Users</Link>
+              <NavLink to="/users">Users</NavLink>
             </li>
             <li style={{ margin: '10px', display: 'inline-block' }}>
-              <Link to="/courses">Courses</Link>
+              <NavLink to="/courses">Courses</NavLink>
             </li>
           </ul>
         </nav>
 
-        <Route path="/users" component={Users} />
-        <Route path="/courses" component={Courses} />
+        <Switch>
+          <Route path="/users" component={Users} />
+          {/* <Route path="/courses/:courseId" component={Course} /> */}
+          <Route path="/courses" component={Courses} />
+        </Switch>
       </div>
     );
   }
