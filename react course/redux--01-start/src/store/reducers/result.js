@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions';
+import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
   results: []
@@ -8,6 +8,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     //new Date().getUTCMilliseconds();
     case actionTypes.STORE_RESULT:
+      // Change data
       return {
         ...state,
         results: state.results.concat({
