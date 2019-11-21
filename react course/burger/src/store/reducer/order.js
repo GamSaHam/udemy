@@ -13,7 +13,7 @@ const purchaseInit = state => {
   });
 };
 
-const purchaseBurgerStart = state => {
+const purchaseBurgerStart = (state, action) => {
   return updateObject(state, { loading: true });
 };
 
@@ -49,7 +49,7 @@ const reducer = (state = initialState, action) => {
       return purchaseInit(state);
 
     case actionTypes.PURCHASE_BURGRE_START:
-      return purchaseBurgerStart(state);
+      return purchaseBurgerStart(state, action);
 
     case actionTypes.PURCHASE_BURGER_SUCCESS:
       return purchaseBurgerSuccess(state, action);
