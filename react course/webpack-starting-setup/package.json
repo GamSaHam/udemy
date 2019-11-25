@@ -1,11 +1,16 @@
 {
-  "name": "webpack",
+  "name": "webpack-starting-setup",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.41.2",
+    "webpack-dev-server": "^3.9.0"
+  }
 }
