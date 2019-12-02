@@ -13,7 +13,7 @@ const orders = props => {
 
   useEffect(() => {
     onFetchOrders(props.token, props.userId);
-  }, [onFetchOrdersz]);
+  }, [onFetchOrders]);
 
   let orders = <Spinner />;
 
