@@ -1,0 +1,5 @@
+1. Put text directly on the image
+2. Overlay the image - color gradients
+3. Put your text in a box
+4. blur the image
+5. The floor fade

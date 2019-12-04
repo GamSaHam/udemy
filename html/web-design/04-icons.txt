@@ -1,0 +1,4 @@
+1. Use Icons to list features/steps
+2. Use Icons for actions and links
+3. Icons should not take a center stage
+4. Use Icon fonts whenever possible

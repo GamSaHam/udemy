@@ -1,0 +1,5 @@
+1. Collect designs that you like
+2. Try understand everything about them
+3. Why do they good look?
+4. what do these sites have in common?
+5. How were they built in Html and css?

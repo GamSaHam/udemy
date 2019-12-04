@@ -1,0 +1,2 @@
+1. Use whitespace
+2. Define Hierarchy
