@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica Neue, Arial;
+  font-size: 18px;
+}
+
+h1,
+h2 {
+  color: #2eb82e;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+.main-text {
+  text-align: justify;
+}
+
+#author-text {
+  font-size: 22px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.container {
+  width: 1140px;
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px; */
+
+  /* margin: top right bottom left; */
+  margin: 20px auto 0 auto;
+}
+
+.blog-post {
+  /* background-color: #0000ff; */
+  width: 75%;
+  float: left;
+  padding-right: 30px;
+  position: relative;
+}
+
+.other-posts {
+  /* background-color: #00ff00; */
+  width: 25%;
+  float: left;
+}
+
+.author-box {
+  /* background-color: #ff0000; */
+  padding-top: 20px;
+  border-top: 1px solid rgb(136, 136, 136);
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.other {
+  margin-bottom: 40px;
+}
+
+/* author-box안에 있는 img 태그들 */
+.author-box img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  float: left;
+}
+
+.blog-post img {
+  height: 150px;
+  width: auto;
+}
+
+.date {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
