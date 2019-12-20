@@ -16,14 +16,26 @@ function calculateAge(el) {
   return 2019 - el + 1;
 }
 
-var age = arrayCalc(years, calculateAge);
+var ages = arrayCalc(years, calculateAge);
 
-console.log(age);
+console.log(ages);
 
 function isFullAge(el) {
   return el >= 18;
 }
 
-var fullAges = arrayCalc(age, isFullAge);
+var fullAges = arrayCalc(ages, isFullAge);
 
 console.log(fullAges);
+
+function maxHeartRate(el) {
+  if (el >= 18 && el <= 81) {
+    return Math.round(206.9 - 0.67 * el);
+  } else {
+    return -1;
+  }
+}
+
+var rates = arrayCalc(ages, maxHeartRate);
+
+console.log(rates);
