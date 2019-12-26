@@ -42,3 +42,35 @@ var emily = {
 };
 
 john.presentation.call(emily, "friendly", "afternoon");
+
+var johnFriendly = john.presentation.bind(john, "friendly");
+johnFriendly("morning");
+
+//example 2
+var years = [1990, 1965, 1937, 2005, 1998];
+
+function arrayCalc(arr, fn) {
+  var arrRes = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    arrRes.push(fn(arr[i]));
+  }
+
+  return arrRes;
+}
+
+function calculateAge(el) {
+  return 2019 - el + 1;
+}
+
+function isFullAge(limit, el) {
+  return el >= limit;
+}
+
+var ages = arrayCalc(years, calculateAge);
+var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
+
+//bind('객체', 첫번째 argument)
+
+console.log(ages);
+console.log(fullJapan);
