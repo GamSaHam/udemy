@@ -3,7 +3,7 @@
         <div class="panel panel-default">
             <div class="panel-body quote">
                 <slot></slot>
-                
+
             </div>
         </div>
     </div>
@@ -28,9 +28,7 @@
 
     .quote:hover{
         background-color: #ffe2e2;
-
     }
-
 
 </style>
 
