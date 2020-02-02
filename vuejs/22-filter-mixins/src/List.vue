@@ -4,29 +4,22 @@
     <hr />
     <input v-model="filterText" />
     <ul>
-      <li v-for="fruit in filteredFruits" v-bind:key="fruit">{{fruit}}</li>
+      <li v-for="fruit in filteredFruits" v-bind:key="fruit">{{ fruit }}</li>
     </ul>
   </div>
 </template>
 
 <script>
+import { fruitMixin } from "./fruitMixin";
+
+// mixins methid called frist and than call created method
 export default {
-  data() {
-    return {
-      text: "Hello there!",
-      fruits: ["Apple", "Banana", "Mango", "Melon"],
-      filterText: ""
-    };
-  },
-  computed: {
-    filteredFruits() {
-      return this.fruits.filter(element => {
-        return element.match(this.filterText);
-      });
-    }
+  mixins: [fruitMixin],
+
+  created() {
+    console.log("Inside List Created Hook");
   }
 };
 </script>
 
-<style>
-</style>
+<style></style>
