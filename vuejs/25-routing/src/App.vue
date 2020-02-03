@@ -20,10 +20,7 @@
     export default {
         components: {
             appHeader : Header
-
         }
-
-
     }
 </script>
 
