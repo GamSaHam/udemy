@@ -64,14 +64,7 @@ const store = new Vuex.Store({
       b : moduleB
     }
 
-
-
-
 })
-
-
-
-
 
 
 new Vue({
