@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--load the properties file: sport.properties-->
+    <context:property-placeholder location="classpath:sport.properties"/>
+
+
+    <bean id="myFortune" class="com.example.demo.service.HappyFortuneService">
+    </bean>
+
+    <!--define the dependency-->
+    <bean id="myCoach" class="com.example.demo.dto.BaseballCoach">
+        <constructor-arg ref="myFortune"/>
+    </bean>
+
+    <bean id="myCoachPrototype" class="com.example.demo.dto.BaseballCoach" scope="prototype">
+        <property name="emailAddress" value="${foo.email}"  />
+        <constructor-arg ref="myFortune"/>
+    </bean>
+
+
+    <bean id="myCoach2" class="com.example.demo.dto.BaseballCoach">
+        <property name="emailAddress" value="${foo.email}"/>
+        <property name="furtuneService" ref="myFortune"/>
+    </bean>
+
+    <bean id="myCoach3" class="com.example.demo.dto.BaseballCoach"
+    init-method="doMyStartupStuff" destroy-method="doMyCleanupStuff">
+
+    </bean>
+
+
+
+
+
+</beans>
