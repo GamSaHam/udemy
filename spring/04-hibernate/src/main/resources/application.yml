@@ -1,0 +1,14 @@
+spring:
+    datasource:
+      username: hbstudent
+      password: hbstudent
+      url: jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&serverTimezone=UTC
+      driver-class-name: com.mysql.jdbc.Driver
+    jpa:
+      hibernate:
+        ddl-auto: update
+
+
+
+
+
