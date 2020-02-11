@@ -164,7 +164,42 @@ class DemoApplicationTests {
         session.getTransaction().commit();
     }
 
+    @Test
+    void deleteQueryTest(){
+        if (entityManagerFactory.unwrap(SessionFactory.class) == null) {
+            throw new NullPointerException("factory is not a hibernate factory");
+        }
+        SessionFactory sessionFactory =  entityManagerFactory.unwrap(SessionFactory.class);
 
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        int studentId = 1;
+
+        Student myStudent = session.get(Student.class, studentId);
+
+        System.out.println("Deleting student: " + myStudent);
+        // delete the student
+        session.delete(myStudent);
+
+        session.getTransaction().commit();
+    }
+
+    @Test
+    void deleteQueryTest2(){
+        if (entityManagerFactory.unwrap(SessionFactory.class) == null) {
+            throw new NullPointerException("factory is not a hibernate factory");
+        }
+        SessionFactory sessionFactory =  entityManagerFactory.unwrap(SessionFactory.class);
+
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        System.out.println("Deleting student id=4");
+        session.createQuery("delete from Student where id=4").executeUpdate();
+
+        session.getTransaction().commit();
+    }
 
 
 
