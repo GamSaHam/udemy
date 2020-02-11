@@ -91,6 +91,7 @@ class DemoApplicationTests {
         if (entityManagerFactory.unwrap(SessionFactory.class) == null) {
             throw new NullPointerException("factory is not a hibernate factory");
         }
+        
         SessionFactory sessionFactory =  entityManagerFactory.unwrap(SessionFactory.class);
 
         Session session = sessionFactory.openSession();
