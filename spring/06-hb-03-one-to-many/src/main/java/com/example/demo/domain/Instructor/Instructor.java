@@ -9,8 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "instructor")
 public class Instructor {
@@ -33,8 +31,12 @@ public class Instructor {
     @JoinColumn(name = "instructor_detail_id")
     private InstructorDetail instructorDetail;
 
-    @OneToMany(mappedBy = "instructor", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @OneToMany(fetch =  FetchType.LAZY, mappedBy = "instructor", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     private List<Course> courses;
+
+    public Instructor(){
+
+    }
 
     public Instructor(String firstName, String lastName, String email){
         this.firstName = firstName;
@@ -59,5 +61,13 @@ public class Instructor {
         tempCourse.setInstructor(this);
     }
 
+
+    public void setInstructorDetail(InstructorDetail instructorDetail) {
+        this.instructorDetail = instructorDetail;
+    }
+
+    public List<Course> getCourses() {
+        return this.courses;
+    }
 
 }
