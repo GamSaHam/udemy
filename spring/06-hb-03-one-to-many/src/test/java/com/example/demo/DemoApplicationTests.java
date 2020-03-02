@@ -5,6 +5,7 @@ import com.example.demo.domain.Instructor.Instructor;
 import com.example.demo.domain.Instructor.InstructorDetail;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -171,18 +172,14 @@ class DemoApplicationTests {
 
         session.beginTransaction();
 
-
         int theId = 1;
         Instructor instructor = session.get(Instructor.class, theId);
 
         System.out.println("instructor:" + instructor);
 
-
-
         session.getTransaction().commit();
-
-
     }
+
 
 
 
