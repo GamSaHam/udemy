@@ -1,25 +1,32 @@
 package com.example.currencyexchangeservice;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 
-public class ExchangeValue {
-
+@Entity
+@Table(name = "exchange_value")
+public class CurrencyExchange {
+    @Id
     private Long id;
+    @Column(name = "currency_from")
     private String from;
+    @Column(name = "currency_to")
     private String to;
-    private BigDecimal conversionMultiple;
+    @Column(name = "conversion_multiple")
+    private BigDecimal conversion;
     private int port;
 
-
-
-    public ExchangeValue() {
+    public CurrencyExchange() {
     }
 
-    public ExchangeValue(Long id, String from, String to, BigDecimal conversionMultiple) {
+    public CurrencyExchange(long id, String from, String to, BigDecimal conversion) {
         this.id = id;
         this.from = from;
         this.to = to;
-        this.conversionMultiple = conversionMultiple;
+        this.conversion = conversion;
     }
 
     public Long getId() {
@@ -46,13 +53,14 @@ public class ExchangeValue {
         this.to = to;
     }
 
-    public BigDecimal getConversionMultiple() {
-        return conversionMultiple;
+    public BigDecimal getConversion() {
+        return conversion;
     }
 
-    public void setConversionMultiple(BigDecimal conversionMultiple) {
-        this.conversionMultiple = conversionMultiple;
+    public void setConversion(BigDecimal conversion) {
+        this.conversion = conversion;
     }
+
     public int getPort() {
         return port;
     }
