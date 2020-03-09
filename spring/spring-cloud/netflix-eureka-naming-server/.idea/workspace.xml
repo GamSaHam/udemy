@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d25777ef-ca37-4d9b-89a8-c568df939aa4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/src/main/java/com/example/currenyconversionservice/CurrencyConversionBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/src/main/java/com/example/currenyconversionservice/CurrencyConversionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/src/main/java/com/example/currenyconversionservice/CurrencyExchangeServiceProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/src/main/java/com/example/currenyconversionservice/CurrenyConversionServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-conversion-service/src/test/java/com/example/currenyconversionservice/CurrenyConversionServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/example/currencyexchangeservice/ExchangeValueRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/netflixeurekanamingserver/NetflixEurekaNamingServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/netflixeurekanamingserver/NetflixEurekaNamingServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/example/currencyexchangeservice/CurrencyExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/example/currencyexchangeservice/ExchangeValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/example/currencyexchangeservice/CurrencyExchangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/example/currencyexchangeservice/CurrencyExchangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/example/currencyexchangeservice/CurrencyExchangeServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/src/main/java/com/example/currencyexchangeservice/CurrencyExchangeServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../currency-exchange-service/src/test/java/com/example/currencyexchangeservice/CurrencyExchangeServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../currency-exchange-service/src/test/java/com/example/currencyexchangeservice/ExchangeValueServiceApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1YnZVcvR87cPIwE6goi4BIfI7G7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="NetflixEurekaNamingServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="netflix-eureka-naming-server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.netflixeurekanamingserver.NetflixEurekaNamingServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d25777ef-ca37-4d9b-89a8-c568df939aa4" name="Default Changelist" comment="" />
+      <created>1583580343279</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583580343279</updated>
+      <workItem from="1583580347434" duration="2634000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="726" height="208" key="GridCell.Tab.0.bottom" timestamp="1583584618534">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="726" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583584618534" />
+    <state width="726" height="208" key="GridCell.Tab.0.center" timestamp="1583584618534">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="726" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583584618534" />
+    <state width="726" height="208" key="GridCell.Tab.0.left" timestamp="1583584618534">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="726" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583584618534" />
+    <state width="726" height="208" key="GridCell.Tab.0.right" timestamp="1583584618534">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="726" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583584618534" />
+    <state width="726" height="208" key="GridCell.Tab.1.bottom" timestamp="1583584618534">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="726" height="208" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583584618534" />
+    <state width="726" height="208" key="GridCell.Tab.1.center" timestamp="1583584618534">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="726" height="208" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583584618534" />
+    <state width="726" height="208" key="GridCell.Tab.1.left" timestamp="1583584618534">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="726" height="208" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583584618534" />
+    <state width="726" height="208" key="GridCell.Tab.1.right" timestamp="1583584618534">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="726" height="208" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583584618534" />
+  </component>
+</project>
