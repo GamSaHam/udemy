@@ -1,10 +1,10 @@
-package com.example.currencyexchangeservice;
+package com.example.netflixeurekanamingserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CurrencyExchangeServiceApplicationTests {
+class NetflixEurekaNamingServerApplicationTests {
 
     @Test
     void contextLoads() {

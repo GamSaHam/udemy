@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "exchange_value")
-public class CurrencyExchange {
+public class ExchangeValue {
     @Id
     private Long id;
     @Column(name = "currency_from")
@@ -16,17 +16,17 @@ public class CurrencyExchange {
     @Column(name = "currency_to")
     private String to;
     @Column(name = "conversion_multiple")
-    private BigDecimal conversion;
+    private BigDecimal conversionMultiple;
     private int port;
 
-    public CurrencyExchange() {
+    public ExchangeValue() {
     }
 
-    public CurrencyExchange(long id, String from, String to, BigDecimal conversion) {
+    public ExchangeValue(long id, String from, String to, BigDecimal conversionMultiple) {
         this.id = id;
         this.from = from;
         this.to = to;
-        this.conversion = conversion;
+        this.conversionMultiple = conversionMultiple;
     }
 
     public Long getId() {
@@ -53,12 +53,12 @@ public class CurrencyExchange {
         this.to = to;
     }
 
-    public BigDecimal getConversion() {
-        return conversion;
+    public BigDecimal getConversionMultiple() {
+        return conversionMultiple;
     }
 
-    public void setConversion(BigDecimal conversion) {
-        this.conversion = conversion;
+    public void setConversionMultiple(BigDecimal conversion) {
+        this.conversionMultiple = conversion;
     }
 
     public int getPort() {
