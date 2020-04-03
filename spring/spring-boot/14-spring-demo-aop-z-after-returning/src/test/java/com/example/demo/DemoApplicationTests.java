@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 class DemoApplicationTests {
@@ -22,24 +24,14 @@ class DemoApplicationTests {
 
         AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 
-        Account account = new Account();
-        account.setName("Madhu");
-        account.setLevel("Platinum");
-        accountDAO.addAccount(account, true);
-        accountDAO.doWork();
+        List<Account> accountList = accountDAO.findAccounts();
 
-        // call the account/setter methods
-        accountDAO.setName("foobar");
-        accountDAO.setServiceCode("silver");
+        //display the accounts
+        System.out.println("\n\nMain Program: AfterReturningDemoApp");
+        System.out.println("-----");
 
-        // call the membership business method
-        String name = accountDAO.getName();
-        String code = accountDAO.getServiceCode();
+        System.out.println(accountList);
 
-
-        MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
-        membershipDAO.addSillyMember();
-        membershipDAO.goToSleep();
 
 
         context.close();
