@@ -24,18 +24,7 @@ class DemoApplicationTests {
 
         AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
 
-        List<Account> accountList = null;
-
-
-        try{
-            // add a boolean flag to simulate exceptions
-
-            boolean tripWire = true;
-            accountList = accountDAO.findAccounts(tripWire);
-
-        }catch (Exception exc){
-            System.out.println("\n\nMain Program ... caught exception: "+ exc);
-        }
+        List<Account> accountList = accountDAO.findAccounts();
 
         //display the accounts
         System.out.println("\n\nMain Program: AfterReturningDemoApp");

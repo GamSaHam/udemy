@@ -14,12 +14,7 @@ public class AccountDAO {
 
     // add a new mehtod : findAccounts()
 
-    public List<Account> findAccounts(boolean tripWire){
-
-        if(tripWire) {
-            throw new RuntimeException("No soup for you!!!");
-        }
-
+    public List<Account> findAccounts(){
         List<Account> myAccounts = new ArrayList<>();
 
         // create sample accounts
