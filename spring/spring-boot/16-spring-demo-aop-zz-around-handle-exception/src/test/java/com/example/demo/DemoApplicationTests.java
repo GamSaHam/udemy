@@ -18,29 +18,6 @@ import java.util.logging.Logger;
 @SpringBootTest
 class DemoApplicationTests {
 
-
-    @Test
-    void addReviewAndCourses() {
-
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DemoConfig.class);
-
-
-        TrafficFortuneService trafficFortuneService = context.getBean("trafficFortuneService", TrafficFortuneService.class);
-
-        System.out.println("Main Program: AroundDemoApp");
-
-        System.out.println("Calling getFortune");
-
-        String data = trafficFortuneService.getFortune();
-
-        System.out.println("My fortune is: "+ data);
-
-        System.out.println("Finished");
-
-        context.close();
-    }
-
-
     private static Logger logger = Logger.getLogger(DemoApplicationTests.class.getName());
 
 
@@ -55,7 +32,8 @@ class DemoApplicationTests {
 
         logger.info("Calling getFortune");
 
-        String data = trafficFortuneService.getFortune();
+        boolean tripWire = true;
+        String data = trafficFortuneService.getFortune(tripWire);
 
         logger.info("My fortune is: "+ data);
 
