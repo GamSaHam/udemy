@@ -32,7 +32,9 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
         http.authorizeRequests()
-                    .anyRequest().authenticated()
+                .antMatchers("/").hasRole("EMPLOYEE")
+                .antMatchers("/leaders/**").hasRole("MANAGER")
+                .antMatchers("/systems/**").hasRole("ADMIN")
                 .and()
                 .formLogin()
                     .loginPage("/showMyLoginPage")
@@ -40,7 +42,9 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
                     .permitAll()
                 .and()
                     .logout()
-                    .permitAll();
+                    .permitAll()
+                .and()
+                .exceptionHandling().accessDeniedPage("/access-denied");
 
 
     }
