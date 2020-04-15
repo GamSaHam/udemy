@@ -1,0 +1,9 @@
+echo "1"
+cal
+history
+history -c; history -w
+which cal
+man which
+help ls
+pwd
+
