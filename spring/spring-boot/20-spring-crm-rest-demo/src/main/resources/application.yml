@@ -1,0 +1,15 @@
+spring:
+    datasource:
+      username: springstudent
+      password: springstudent
+      url: jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&serverTimezone=UTC
+      driver-class-name: com.mysql.jdbc.Driver
+
+    jpa:
+      hibernate:
+        ddl-auto: none
+
+
+
+
+
