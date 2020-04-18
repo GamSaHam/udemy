@@ -1,3 +1,7 @@
+
+server:
+  port: 9080
+
 spring:
     datasource:
       username: springstudent
@@ -9,7 +13,8 @@ spring:
       hibernate:
         ddl-auto: none
 
-
-
-
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,beans,env,mappings

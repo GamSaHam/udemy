@@ -30,16 +30,18 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 
 		SessionFactory sessionFactory =  entityManagerFactory.unwrap(SessionFactory.class);
-		Session currentSession = sessionFactory.openSession();
+		Session session = sessionFactory.openSession();
 
 		// create a query  ... sort by last name
 		Query<Customer> theQuery = 
-				currentSession.createQuery("from Customer order by lastName",
+				session.createQuery("from Customer order by lastName",
 											Customer.class);
 		
 		// execute query and get result list
 		List<Customer> customers = theQuery.getResultList();
-				
+
+		session.close();
+
 		// return the results		
 		return customers;
 	}
@@ -53,12 +55,18 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 		SessionFactory sessionFactory =  entityManagerFactory.unwrap(SessionFactory.class);
 		// get current hibernate session
-		Session currentSession = sessionFactory.openSession();
-		
+		Session session = sessionFactory.openSession();
+
+		session.beginTransaction();
+
 		// save/upate the customer ... finally LOL
-		currentSession.saveOrUpdate(theCustomer);
-		
+		session.saveOrUpdate(theCustomer);
+
+		session.getTransaction().commit();
+
+		session.close();
 	}
+
 
 	@Override
 	public Customer getCustomer(int theId) {
@@ -69,11 +77,14 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 		SessionFactory sessionFactory =  entityManagerFactory.unwrap(SessionFactory.class);
 		// get the current hibernate session
-		Session currentSession = sessionFactory.openSession();
+		Session session = sessionFactory.openSession();
 		
 		// now retrieve/read from database using the primary key
-		Customer theCustomer = currentSession.get(Customer.class, theId);
-		
+		Customer theCustomer = session.get(Customer.class, theId);
+
+
+		session.close();
+
 		return theCustomer;
 	}
 
@@ -86,14 +97,20 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 		SessionFactory sessionFactory =  entityManagerFactory.unwrap(SessionFactory.class);
 		// get the current hibernate session
-		Session currentSession = sessionFactory.openSession();
-		
+		Session session = sessionFactory.openSession();
+
+		session.beginTransaction();
+
 		// delete object with primary key
 		Query theQuery = 
-				currentSession.createQuery("delete from Customer where id=:customerId");
+				session.createQuery("delete from Customer where id=:customerId");
 		theQuery.setParameter("customerId", theId);
 		
-		theQuery.executeUpdate();		
+		theQuery.executeUpdate();
+
+		session.getTransaction().commit();
+
+		session.close();
 	}
 
 }
