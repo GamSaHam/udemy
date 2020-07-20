@@ -1,0 +1,87 @@
+
+
+//plugins {
+//    id 'java'
+//}
+//
+//group 'org.example'
+//version '1.0-SNAPSHOT'
+//
+//repositories {
+//    mavenCentral()
+//}
+//
+//dependencies {
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+//}
+
+//defaultTasks 'hello'
+//
+//task ('hello').doLast{
+//    println "Hello World"
+//
+//}
+
+//import java.text.SimpleDateFormat
+//
+//
+//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+//sdf.setTimeZone(TimeZone.getTimeZone("UTC"))
+//
+//println "Hello World now:" + sdf.format(new Date())
+
+// inline code example
+//sayHelloWolrd()
+//
+//void sayHelloWolrd() {
+//    println "Hello World!"
+//
+//}
+//
+//int doubleIt(int i) {
+//
+//    i* 3
+//    def y = i
+//}
+//
+//println doubleIt(2)
+
+
+/// Types
+// def == Object
+// Object date = new Date();
+// def date = new Date();
+
+//Integer doubleIt(Integer i){
+//
+//    i * 3
+//    Integer y = i
+//}
+//
+//println doubleIt("Hello")
+
+// Type checking performed at Runtime
+// Groovy is a Dynamic Language!
+
+//def s1 = "a String"
+//println s1
+//def s2 = 'a String'
+//println s2
+//
+//def s3 = """
+//A
+//String
+//"""
+//
+//println s3
+//
+//def x = 4
+//println "x is $x"
+//
+//def myCourse = "gradle"
+//println "I'm training in: ${myCourse.toUpperCase()}"
+
+
+
+
+
