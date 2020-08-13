@@ -1,0 +1,112 @@
+
+// Closures
+
+def echoIt = {
+
+    println it
+
+}
+
+echoIt("Hello World")
+echoIt(10)
+
+
+Closure echoIt2 = { a,b,c ->
+
+    println a
+    println b
+    println c
+    4
+
+    // 마지막줄에 리턴이 생략됨
+}
+println echoIt2("hello world", " how are you", "today")
+
+
+
+// 클로저 함수형태로 받는다.
+def oneArgMethod(closure) {
+    closure() * 3
+    // 생략된 리턴값을 받는다.
+}
+
+// 함수형태를 전달해서
+println oneArgMethod {10}
+
+def i = oneArgMethod {
+    def y = 3
+    y * 2
+}
+
+assert i == 18
+
+def twoArgMethod(factor, closure) {
+    closure() * factor
+}
+
+println twoArgMethod( 3, {4})
+
+def ret = twoArgMethod 4 , {4}
+
+println ret
+
+
+for (int j in [1,2,3]){
+    println j
+}
+
+
+[1,2,3].each {
+    println it
+}
+
+
+// Closure resolution
+class Person {
+    String theName
+    Integer theAge
+
+    Person(theName, theAge){
+        this.theName = theName;
+        this.theAge = theAge;
+    }
+
+    Closure nameSayer = {
+        print theName
+    }
+
+    def executeInside(Closure c){
+        c.delegate = this
+        c()
+    }
+
+}
+
+def p2 = new Person("John",42)
+
+p2.executeInside { println ("theName:" + theName + " theAge:" + theAge) }
+
+def p1 = new Person("Fred", 35)
+p1.nameSayer()
+
+def theName = "John"
+
+def sayName = {
+    println theName
+}
+
+sayName()
+
+theName = "Bill"
+
+sayName()
+
+println p1.theName
+
+
+
+
+
+
+
+

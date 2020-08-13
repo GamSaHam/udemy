@@ -1,0 +1,15 @@
+vi date.txt
+apt-get install cut
+date 1> date.txt
+cut < date.txt --delimiter " " --fields 1
+date | cut --delimiter " " --fields 1
+date | cut --delimiter " " --fields 1 > today.txt
+date | cut --delimiter " " > today.txt --fields 1
+date > date.txt  | cut --delimiter " " --fields 1
+date | cut --delimiter=" " --fields=1
+
+
+
+
+
+
