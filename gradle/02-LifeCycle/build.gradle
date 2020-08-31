@@ -1,0 +1,25 @@
+logger.info ">>>> build.gradle This is executed during the confguration Phase - timestamp"
+
+logger.info ">>>> build.gradle: ${project.gradle.gradleVersion}"
+logger.info ">>>> build.gradle: ${gradle.gradleHomeDir}"
+logger.info ">>>> build.gradle: ${gradle.gradleUserHomeDir}"
+
+logger.info ">>>> build.gradle: $project.buildFile"
+
+logger.info ">>>> build.gradle: ${project.relativePath(project.buildFile)}"
+
+logger.info ">>>> build.gradle: ${relativePath(buildFile)}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+

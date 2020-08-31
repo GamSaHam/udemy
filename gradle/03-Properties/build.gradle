@@ -1,0 +1,93 @@
+
+// 1. Gradke has build in 'properties' on its API Objects;
+
+// Can be predefined values;
+
+// e.g. gradleVersion, gradleHomeDir
+
+// or Objects, like 'logger' which is a project on the;
+
+// Script<interface> ----> getLogger()
+
+// Returns the logger for the script. You can use this in your script to write log messages.
+
+
+// Script
+// <Interface>
+// getLogger()
+
+// 2. Gradle allows "key-value" pairs in a 'gradle.properties' file.
+// Available to script in the settings.gradle & build.gradle files
+
+// 3. Create & Add our user defined properties
+
+
+logger.info """
+Welcome to Gradle $gradle.gradleVersion - http://www.gradle.org
+Gradle home is set to : $gradle.gradleHomeDir
+Gradle user directory is set to: $gradle
+
+Base directory: $projectDir
+Running script ${relativePath(buildFile)}
+"""
+
+logger.info "has property: ${project.gradle.hasProperty("gradleVersion")}"
+
+logger.info "has property: ${hasProperty('projectDir')}"
+
+if(project.hasProperty('gradlePropertiesProp')){
+    logger.info "The property file value is $gradlePropertiesProp"
+}else {
+    logger.info "Oops! gradlePropertiesProp can't be found"
+}
+
+if(project.hasProperty('commandLineProjectProp')){
+    logger.info "The property file value is $commandLineProjectProp"
+}else {
+    logger.info "Oops! commandLineProjectProp can't be found"
+}
+
+
+// gradle -i -PcommandLineProjectProp=commandLinePrjectValue
+
+
+project.ext.sayHello = "hello!"
+
+logger.info sayHello
+
+if (project.hasProperty('sayHello')){
+    logger.info sayHello
+}else {
+
+    logger.info "Unable to say Hello!"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

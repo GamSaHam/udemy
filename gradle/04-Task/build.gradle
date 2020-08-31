@@ -1,0 +1,77 @@
+
+defaultTasks 'hello', 'hi', 'hello2'
+
+logger.info ">>> build.gradle --> This is executed during the configuration phase > timestamp "
+
+task hi
+
+project.hi.doLast {
+
+    logger.info  "hi"
+
+}
+
+task hello {
+
+    description = "Log the name of the Task"
+    group = "welcome"
+
+
+    doFirst {
+        logger.info "My name is: $name and this is my 1nd defined Action"
+    }
+
+    doLast {
+        logger.info "My name is: $name and this is my 2nd define Action"
+    }
+}
+
+hello.doLast {
+    logger.info "My name is: $name and this is my 3nd defined Action"
+}
+
+hello.doLast {
+    logger.info "My name is: $name and this is my 4nd defined Action"
+}
+
+hello.doFirst{
+    logger.info "My name is: $name and this is my 5nd defined Action"
+}
+
+logger.info hello.description
+logger.info hello.group
+
+task hello2 {
+    description = "Log the name of the Task"
+    group = "Welcome"
+
+}
+
+hello2.doFirst {
+    logger.info "My name is: $name and this is my 1st defined Action"
+}.doLast {
+    logger.info "My name is: $name and this is my 2nd defined Action"
+}.doLast {
+    logger.info "My name is: $name and this is my 3nd defined Action"
+}.doLast {
+    logger.info "My name is: $name and this is my 4th defined Action"
+}.doFirst {
+    logger.info "My name is: $name and this is my 5th defined Action"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+defaultTasks 'doFinished'
+
+logger.info ">>> build.gradle --> This is executed during the configuration phase - timestamp @";
+
+task doStartProcess {
+    doLast {
+        logger.info "$name - Now starting the process - OK!"
+    }
+
+}
+
+task doStep2 {
+    doLast {
+        logger.info "$name - Performed OK!"
+    }
+
+}
+
+//task doSomethingInTheMiddle (dependsOn: ['doStartProcess', tasks.findAll { task -> task.name.startsWith("doStep2")}]) {
+task doSomethingInTheMiddle  {
+    doLast {
+        logger.info "$name - Performed the middle step - OK!"
+
+    }
+}
+
+// 중복된 task doStep2는 실행되지 않는다.
+task doFinished (dependsOn : ['doSomethingInTheMiddle', 'doStep2']) {
+    doLast {
+        logger.info "$name - Done - OK! >>> with version=$version"
+    }
+}
+
+logger.info ">>> ${project.tasks.findAll { task -> task.name.startsWith("doStep2")}}"
+
+//doSomethingInTheMiddle.dependsOn doStartProcess
+//doSomethingInTheMiddle.dependsOn doStep2
+
+//if(Math.random() < 0.5) {
+//    doSomethingInTheMiddle.dependsOn doStartProcess, doStep2
+//}
+
+doSomethingInTheMiddle.dependsOn doStartProcess, doStep2
+
+project.gradle.taskGraph.whenReady { taskGraph ->
+
+    if(taskGraph.hasTask(doStep2)){
+        project.version = "1.0"
+    }else{
+        project.version = "1.0-SHAPSHOT"
+    }
+
+    logger.info ">>> $project.gradle.taskGraph.allTasks"
+}
+
+
+project.gradle.taskGraph.beforeTask { task ->
+
+    logger.info "+++ Before task $task.name"
+
+
+}
+
+project.gradle.taskGraph.afterTask { task ->
+
+    logger.info "+++ After task $task.name"
+
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+// Script
+// logger.info "Hello!"
+//
+//apply {
+//    "Hello Wolrd!"
+//}
+
+// Gradle Lifecycle
+
+// 1. Initialization
+// 2. Configuration
+// 3. Execution
+
+// println "build.gradle --> This is executed during the initialization phase"
+
+// Script
+// <interface>
+// + Properties
+// + Methods
+
+// Project
+// <interface>
+// + Properties
+// + Methods
+
+
+// settings.gradle
+
+// Script
+// <interface>
+
+// delegate to
+
+// Settings
+// <Interface>
+
+// init.gradle
+// Script
+// <interface>
+// delegates to
+// Gradle
+// <interface>
+
+// build.gradle
+// Configuration Phase delegates to
+// delegate to Project
+
+// settings.gradle
+// Initialization Phase delegates to
+// Settings
+// init.gradle Initialization Phase delegates to
+// Gradle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

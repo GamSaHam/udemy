@@ -1,0 +1,6 @@
+rootProject.name = '02.LifeCycle'
+
+logger.info ">>>> settings.gradle: ${gradle.gradleVersion}"
+logger.info ">>>> settings.gradle: ${gradle.gradleHomeDir}"
+logger.info ">>>> settings.gradle: ${gradle.gradleUserHomeDir}"
+

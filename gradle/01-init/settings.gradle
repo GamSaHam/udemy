@@ -1,0 +1,5 @@
+rootProject.name = 'groovy'
+
+println "settle.gradle --> This is executed during the initialization phase"
+
+
