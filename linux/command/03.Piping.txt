@@ -3,10 +3,9 @@ date | cut --delimiter=" " --feild=1
 
 date | tee fulldate.txt  | cut --delimiter=" " --field=1
 
+date | tee fulldate.txt  | cut --delimiter=" " --field=1 > today.txt
 
-
-
-
+date | tee fulldate.txt  | cut --delimiter=" " --field=1 | tee today.txt
 
 
 
